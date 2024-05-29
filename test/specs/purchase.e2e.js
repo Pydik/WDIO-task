@@ -7,7 +7,7 @@ import CheckoutCompletePage from '../pageobjects/checkoutComplete.page.js';
 import credentials from '../helpers/credentials.js';
 
 describe('Testing purchases', () => {
-    it.only('Confirmation of purchase', async () => {
+    it('Confirmation of purchase', async () => {
         await LoginPage.open();
         await LoginPage.login(credentials.getUserCredentials('standard'))
         await HomePage.addBackpackClick()
