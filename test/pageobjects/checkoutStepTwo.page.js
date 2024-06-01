@@ -1,13 +1,12 @@
 import BasePage from './basePage.js';
 
 class CheckoutStepTwo extends BasePage {
-
-    get finishBtn () {
-        return $('#finish')
+    get finishBtn() {
+        return $('#finish');
     }
 
-    finishBtnClick () {
-        this.finishBtn.click()
+    async finishBtnClick() {
+        return await this.finishBtn.click();
     }
 }
 
