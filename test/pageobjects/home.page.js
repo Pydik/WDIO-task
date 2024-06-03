@@ -7,6 +7,9 @@ class HomePage extends BasePage {
     get addBikeLight() {
         return $('#add-to-cart-sauce-labs-bike-light');
     }
+    get shoppingCartLink() {
+        return $('.shopping_cart_link')
+    }
     get shoppingCart() {
         return $('[data-test="shopping-cart-badge"]');
     }
@@ -15,6 +18,18 @@ class HomePage extends BasePage {
     }
     get logout() {
         return $('#logout_sidebar_link');
+    }
+
+    get x() {
+        return $('[data-test="social-twitter"]')
+    }
+
+    get facebook () {
+        return $('[data-test="social-facebook"]')
+    }
+
+    get linkedin () {
+        return $('[data-test="social-linkedin"]')
     }
 
     async open() {
@@ -39,6 +54,18 @@ class HomePage extends BasePage {
 
     async logoutClick() {
         return await this.logout.click();
+    }
+
+    async xClick () {
+        return await this.x.click()
+    }
+
+    async facebookClick () {
+        return await this.facebook.click()
+    }
+
+    async linkedinClick () {
+        return await this.linkedin.click()
     }
 }
 
