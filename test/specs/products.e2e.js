@@ -12,7 +12,7 @@ describe('Products', () => {
         const pricesLoHi = await $$('[class="inventory_item_price"]');
         const priceValuesLoHi = [];
 
-         for (let priceElement of pricesLoHi) {
+        for (let priceElement of pricesLoHi) {
             const priceText = await priceElement.getText();
             const price = parseFloat(priceText.replace('$', '').replace(',', ''));
             priceValuesLoHi.push(price);
@@ -29,7 +29,7 @@ describe('Products', () => {
             priceValuesHiLo.push(price);
         }
 
-        await homePage.sortByAZClick()
+        await homePage.sortByAZClick();
         const productsAZ = await $$('.inventory_item_name');
 
         const productNamesAZ = [];
@@ -40,7 +40,7 @@ describe('Products', () => {
         const sortedNamesAZ = [...productNamesAZ].sort();
         expect(productNamesAZ).toEqual(sortedNamesAZ);
 
-        await homePage.sortByZAClick()
+        await homePage.sortByZAClick();
         const productsZA = await $$('.inventory_item_name');
 
         const productNamesZA = [];

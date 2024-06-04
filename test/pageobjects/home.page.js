@@ -53,7 +53,7 @@ class HomePage extends BasePage {
     }
 
     get inventoryItemName() {
-        return $$('.inventory_item_name')
+        return $$('.inventory_item_name');
     }
 
     async open() {
