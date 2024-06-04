@@ -11,16 +11,16 @@ describe('Checkout', () => {
         await loginPage.open();
         await loginPage.login(credentials.getUserCredentials('standard'));
 
-        await homePage.addBackpackClick()
-        await homePage.shoppingCartClick()
-        await cartPage.checkoutClick()
-        await checkoutStepOnePage.fillCheckout('user', 'user', 'user')
-        await checkoutStepOnePage.continueBntClick()
-        await checkoutStepTwoPage.finishBtnClick()
-        await expect(checkoutCompletePage.completeHeader).toHaveText('Thank you for your order!')
-        await checkoutCompletePage.backHomeBtnClick()
+        await homePage.addBackpackClick();
+        await homePage.shoppingCartClick();
+        await cartPage.checkoutClick();
+        await checkoutStepOnePage.fillCheckout('user', 'user', 'user');
+        await checkoutStepOnePage.continueBntClick();
+        await checkoutStepTwoPage.finishBtnClick();
+        await expect(checkoutCompletePage.completeHeader).toHaveText('Thank you for your order!');
+        await checkoutCompletePage.backHomeBtnClick();
 
         await expect(await browser.getUrl()).toContain('https://www.saucedemo.com/inventory.html');
-        await expect(await homePage.shoppingCartLink.getAttribute('span')).toBeNull()
+        await expect(await homePage.shoppingCartLink.getAttribute('span')).toBeNull();
     });
 });

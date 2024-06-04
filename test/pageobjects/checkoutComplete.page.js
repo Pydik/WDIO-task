@@ -6,11 +6,11 @@ class CheckoutComplete extends BasePage {
     }
 
     get backHomeBtn() {
-        return $('#back-to-products')
+        return $('#back-to-products');
     }
 
     async backHomeBtnClick() {
-        await this.backHomeBtn.click()
+        await this.backHomeBtn.click();
     }
 }
 

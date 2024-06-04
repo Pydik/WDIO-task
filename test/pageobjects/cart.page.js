@@ -6,11 +6,11 @@ class CartPage extends BasePage {
     }
 
     get checkout() {
-        return $('#checkout')
+        return $('#checkout');
     }
 
-    async checkoutClick () {
-        return await this.checkout.click()
+    async checkoutClick() {
+        return await this.checkout.click();
     }
 }
 
